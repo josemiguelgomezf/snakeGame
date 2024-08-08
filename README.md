@@ -23,3 +23,28 @@ Crearemos un menú inicial con opciones para iniciar el juego y seleccionar el n
 
 Controles Táctiles
 Para asegurarnos de que el juego sea accesible en dispositivos móviles, añadiremos controles táctiles que permitan dirigir la serpiente utilizando botones en pantalla.
+
+Transformando tu Juego de Snake de HTML, CSS y JavaScript a una APK para Android
+Introducción
+Hace unos días compartí con ustedes un artículo sobre cómo crear el clásico juego de Snake utilizando HTML, CSS y JavaScript. El juego, desarrollado completamente con tecnologías web, es un excelente proyecto para mejorar tus habilidades de programación front-end. Hoy, daré un paso más allá y te mostraré cómo convertir ese juego web en una aplicación móvil para Android utilizando Apache Cordova.
+
+Paso 1: Preparación del Entorno
+Instalación de Node.js y Cordova
+Para comenzar, necesitamos instalar Node.js, que nos permitirá utilizar npm (Node Package Manager) para gestionar nuestras dependencias. Una vez que tengamos Node.js instalado, podemos instalar Cordova, una herramienta que nos permite crear aplicaciones móviles utilizando tecnologías web.
+
+Configuración del Proyecto Cordova
+Con Cordova instalado, el siguiente paso es crear un nuevo proyecto. Usaremos la línea de comandos para configurar el proyecto de Cordova, especificando el identificador del paquete y el nombre de la aplicación. Una vez configurado el proyecto, añadiremos la plataforma Android.
+
+Paso 2: Integración de los Archivos del Juego
+Copiar Archivos al Proyecto Cordova
+Nuestro siguiente paso es integrar los archivos HTML, CSS y JavaScript del juego de Snake en el proyecto de Cordova. Para ello, simplemente copiamos los archivos existentes de nuestro juego al directorio www del proyecto de Cordova. Este directorio actúa como el punto de entrada para la aplicación móvil, de manera similar a cómo serviríamos una aplicación web.
+
+Paso 3: Construcción y Generación de la APK
+Configuración del SDK de Android
+Antes de construir la APK, necesitamos asegurarnos de tener el SDK de Android correctamente configurado en nuestro sistema. Esto incluye instalar Android Studio y configurar las variables de entorno necesarias para que Cordova pueda acceder a las herramientas de construcción de Android.
+
+Construcción de la APK
+Con todo configurado, podemos proceder a construir la APK utilizando comandos de Cordova. Primero, construimos el proyecto en modo debug para pruebas iniciales. Si todo funciona correctamente, podemos proceder a construir la APK en modo release, que es adecuada para distribución.
+
+Prueba en un Dispositivo Android
+Una vez que tenemos la APK construida, el siguiente paso es probarla en un dispositivo Android. Podemos utilizar herramientas como adb (Android Debug Bridge) para instalar la APK en nuestro dispositivo y verificar que todo funciona como se espera.
