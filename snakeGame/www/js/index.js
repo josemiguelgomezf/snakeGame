@@ -20,14 +20,20 @@ document.getElementById('continueButton').addEventListener('click', function() {
         showNextDialog();
     } else {
         document.getElementById('dialog').classList.add('hidden');
-        document.getElementById('game').classList.remove('hidden');
-        startGame();
+        document.getElementById('levelSelect').classList.remove('hidden');
     }
 });
 
 function showNextDialog() {
     document.getElementById('dialogText').textContent = dialogs[currentDialogIndex];
 }
+
+// Seleccionar nivel
+document.getElementById('level1Button').addEventListener('click', function() {
+    document.getElementById('levelSelect').classList.add('hidden');
+    document.getElementById('game').classList.remove('hidden');
+    startGame();
+});
 
 // Lógica del juego
 function startGame() {
@@ -39,19 +45,37 @@ function startGame() {
     let snake = [{ x: 10, y: 10 }];
     let direction = { x: 0, y: 0 };
     let food = { x: 5, y: 5 };
+    let score = 0;
 
     function gameLoop() {
         update();
         draw();
-        setTimeout(gameLoop, 100);
+        setTimeout(gameLoop, 150); // Velocidad más lenta
     }
 
     function update() {
         const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
+
+        // Colisión con los bordes
+        if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) {
+            resetGame();
+            return;
+        }
+
+        // Colisión consigo misma
+        for (let i = 1; i < snake.length; i++) {
+            if (head.x === snake[i].x && head.y === snake[i].y) {
+                resetGame();
+                return;
+            }
+        }
+
         snake.unshift(head);
 
         if (head.x === food.x && head.y === food.y) {
             food = { x: Math.floor(Math.random() * tileCount), y: Math.floor(Math.random() * tileCount) };
+            score++;
+            document.getElementById('score').textContent = `Puntuación: ${score}`;
         } else {
             snake.pop();
         }
@@ -68,6 +92,14 @@ function startGame() {
         ctx.fillRect(food.x * gridSize, food.y * gridSize, gridSize, gridSize);
     }
 
+    function resetGame() {
+        snake = [{ x: 10, y: 10 }];
+        direction = { x: 0, y: 0 };
+        food = { x: 5, y: 5 };
+        score = 0;
+        document.getElementById('score').textContent = `Puntuación: ${score}`;
+    }
+
     // Controles
     document.getElementById('upButton').addEventListener('click', () => direction = { x: 0, y: -1 });
     document.getElementById('downButton').addEventListener('click', () => direction = { x: 0, y: 1 });
@@ -75,11 +107,7 @@ function startGame() {
     document.getElementById('rightButton').addEventListener('click', () => direction = { x: 1, y: 0 });
 
     // Reiniciar nivel
-    document.getElementById('restartButton').addEventListener('click', function() {
-        snake = [{ x: 10, y: 10 }];
-        direction = { x: 0, y: 0 };
-        food = { x: 5, y: 5 };
-    });
+    document.getElementById('restartButton').addEventListener('click', resetGame);
 
     gameLoop();
 }

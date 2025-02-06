@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url('../fondos/fondoMenu.jpeg');
+    background-image: url('fondos/fondoMenu.jpeg');
     background-size: cover;
     background-position: center;
     font-family: 'Press Start 2P', cursive;
@@ -13,19 +13,22 @@ body {
     text-align: center;
 }
 
-#menu, #dialog, #game {
+#menu, #dialog, #levelSelect, #game {
     text-align: center;
+    width: 90vw;
+    max-width: 400px;
+    margin: auto;
 }
 
 #menu h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-#playButton, #continueButton, #restartButton {
+#playButton, #continueButton, #level1Button, #restartButton {
     font-family: 'Press Start 2P', cursive;
-    font-size: 1.2rem;
+    font-size: 1rem;
     padding: 10px 20px;
     background-color: #8B4513;
     color: white;
@@ -38,19 +41,23 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 10px;
-    max-width: 90%;
-    margin: auto;
 }
 
-#dialogContent {
-    font-size: 1rem;
-    line-height: 1.5;
+#levelSelect {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 #game {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#score {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 #snakeGame {
