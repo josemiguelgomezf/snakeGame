@@ -1,113 +1,87 @@
 body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../fondos/fondoMenu.jpeg');
+    background-size: cover;
+    background-position: center;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-align: center;
+}
+
+#menu, #dialog, #game {
+    text-align: center;
+}
+
+#menu h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+#playButton, #continueButton, #restartButton {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#dialog {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    margin: auto;
+}
+
+#dialogContent {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#game {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
+}
+
+#snakeGame {
+    border: 2px solid white;
+    background-color: black;
+    width: 90vw;
+    max-width: 400px;
+    height: 90vw;
+    max-height: 400px;
+}
+
+#controls {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#controls button {
+    font-size: 1.5rem;
+    padding: 10px;
+    background-color: #8B4513;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#restartButton {
+    margin-top: 20px;
 }
 
 .hidden {
     display: none;
-}
-
-.main-menu {
-    position: relative;
-    text-align: center;
-}
-
-.main-menu .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.main-menu h1 {
-    position: relative;
-    z-index: 1;
-}
-
-.main-menu button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 16px;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-}
-
-.dialog {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-}
-
-.dialog-content {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.dialog-content button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.menu, .game-over {
-    text-align: center;
-}
-
-button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.game-container {
-    position: relative;
-}
-
-canvas {
-    border: 1px solid #fff;
-    background-color: #000;
-    width: 100%;
-    height: auto;
-}
-
-.score {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 20px;
-}
-
-.controls {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.controls button {
-    margin: 5px;
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
 }
