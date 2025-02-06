@@ -1,3 +1,22 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const menuMusic = document.getElementById('menu-music');
+    menuMusic.play();
+});
+
+function showDialog() {
+    document.getElementById('main-menu').classList.add('hidden');
+    document.getElementById('dialog').classList.remove('hidden');
+}
+
+function showOptions() {
+    alert("Opciones no implementadas aún.");
+}
+
+function startGameAfterDialog() {
+    document.getElementById('dialog').classList.add('hidden');
+    document.getElementById('menu').classList.remove('hidden');
+}
+
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 const scale = 20;
@@ -57,7 +76,7 @@ function endGame() {
 
 function restartGame() {
     document.getElementById('game-over').classList.add('hidden');
-    document.getElementById('menu').classList.remove('hidden');
+    document.getElementById('main-menu').classList.remove('hidden');
 }
 
 function changeDirection(direction) {

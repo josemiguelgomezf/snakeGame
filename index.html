@@ -7,15 +7,36 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="menu" class="menu">
+    <div id="main-menu" class="main-menu">
+        <img src="fondos/fondoMenu.jpeg" alt="Fondo Menú" class="background-image">
+        <audio id="menu-music" loop>
+            <source src="musica/menu.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <h1>Snake Game</h1>
+        <button onclick="showDialog()">JUGAR</button>
+        <button onclick="showOptions()">OPCIONES</button>
+    </div>
+
+    <div id="dialog" class="dialog hidden">
+        <div class="dialog-content">
+            <p>Personaje 1: ¡Hola! ¿Estás listo para jugar?</p>
+            <p>Personaje 2: ¡Claro que sí! Vamos a por ello.</p>
+            <button onclick="startGameAfterDialog()">Comenzar Juego</button>
+        </div>
+    </div>
+
+    <div id="menu" class="menu hidden">
         <h1>Snake Game</h1>
         <button onclick="startGame('easy')">Start Game (Easy)</button>
         <button onclick="startGame('hard')">Start Game (Hard)</button>
     </div>
+
     <div id="game-container" class="game-container hidden">
         <canvas id="gameCanvas"></canvas>
         <div class="score">Score: <span id="score">0</span></div>
     </div>
+
     <div id="controls" class="controls hidden">
         <button onclick="changeDirection('Up')">▲</button>
         <div>
@@ -24,11 +45,13 @@
         </div>
         <button onclick="changeDirection('Down')">▼</button>
     </div>
+
     <div id="game-over" class="game-over hidden">
         <h1>Game Over</h1>
         <p>Score: <span id="final-score"></span></p>
         <button onclick="restartGame()">Play Again</button>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
