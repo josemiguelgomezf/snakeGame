@@ -71,3 +71,43 @@ Con todo configurado, podemos proceder a construir la APK utilizando comandos de
 #### Prueba en un Dispositivo Android
 
 Una vez que tenemos la APK construida, el siguiente paso es probarla en un dispositivo Android. Podemos utilizar herramientas como `adb` (Android Debug Bridge) para instalar la APK en nuestro dispositivo y verificar que todo funciona como se espera.
+
+Pasos para convertir tu juego en una APK con Cordova:
+Instalar Cordova:
+Si no lo tienes instalado, puedes instalarlo globalmente usando npm:
+
+bash
+Copy
+npm install -g cordova
+Crear un nuevo proyecto Cordova:
+Crea un nuevo proyecto Cordova en tu carpeta de trabajo:
+
+bash
+Copy
+cordova create nombre-del-proyecto
+Esto generará una estructura de carpetas para tu proyecto.
+
+Agregar la plataforma Android:
+Navega a la carpeta del proyecto recién creado:
+
+bash
+Copy
+cd nombre-del-proyecto
+Luego, agrega la plataforma Android:
+
+bash
+Copy
+cordova platform add android
+Copiar tus archivos de juego:
+Copia tus archivos HTML, CSS y JS en la carpeta www del proyecto Cordova. Reemplaza los archivos que ya están allí.
+
+Compilar la APK:
+Para generar la APK, ejecuta el siguiente comando:
+
+bash
+Copy
+cordova build android
+Esto generará un archivo APK en la carpeta platforms/android/app/build/outputs/apk/.
+
+Probar la APK:
+Puedes instalar la APK en un dispositivo Android o usar un emulador para probarla.
