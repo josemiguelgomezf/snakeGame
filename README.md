@@ -20,7 +20,7 @@ El archivo JavaScript será donde se desarrollará toda la lógica del juego. Co
 
 ### Movimientos y Colisiones
 
-Implementaremos la lógica para mover la serpiente en función de las teclas de dirección que se presionen. También añadiremos detección de colisiones para asegurarnos de que la serpiente pueda comer la fruta y crecer, así como detectar si la serpiente colisiona con los bordes del canvas o consigo misma.
+Implementaremos la lógica para mover la serpiente en función de las teclas de dirección que se presionen. También añadiremos detección de colisiones para asegurarnos de que la serpiente pueda comer la fruta y crecer, así como detectar si la serpiente colisiona con los bordes del canvas o consigo misma
 
 ### Dificultad y Trampas
 
