@@ -8,8 +8,8 @@ const dialogs = [
 
 // Iniciar juego
 document.getElementById('playButton').addEventListener('click', function() {
-    document.getElementById('menu').classList.add('hidden');
-    document.getElementById('dialog').classList.remove('hidden');
+    document.getElementById('menu').style.display='none';
+    document.getElementById('dialog').style.display='flex';
     showNextDialog();
 });
 
@@ -19,8 +19,8 @@ document.getElementById('continueButton').addEventListener('click', function() {
         currentDialogIndex++;
         showNextDialog();
     } else {
-        document.getElementById('dialog').classList.add('hidden');
-        document.getElementById('levelSelect').classList.remove('hidden');
+        document.getElementById('dialog').style.display='none';
+        document.getElementById('levelSelect').style.display='flex';
     }
 });
 
@@ -30,8 +30,8 @@ function showNextDialog() {
 
 // Seleccionar nivel
 document.getElementById('level1Button').addEventListener('click', function() {
-    document.getElementById('levelSelect').classList.add('hidden');
-    document.getElementById('game').classList.remove('hidden');
+    document.getElementById('levelSelect').style.display='none';
+    document.getElementById('game').style.display='flex';
     startGame();
 });
 
@@ -39,7 +39,7 @@ document.getElementById('level1Button').addEventListener('click', function() {
 function startGame() {
     const canvas = document.getElementById('snakeGame');
     const ctx = canvas.getContext('2d');
-    const gridSize = 20;
+    const gridSize = 5;
     const tileCount = canvas.width / gridSize;
 
     let snake = [{ x: 10, y: 10 }];
@@ -57,10 +57,11 @@ function startGame() {
         const head = { x: snake[0].x + direction.x, y: snake[0].y + direction.y };
 
         // Colisión con los bordes
-        if (head.x < 0 || head.x >= tileCount || head.y < 0 || head.y >= tileCount) {
+        if (head.x < 0 || head.x >= canvas.width / gridSize || head.y < 0 || head.y >= canvas.height / gridSize) {
             resetGame();
             return;
         }
+        
 
         // Colisión consigo misma
         for (let i = 1; i < snake.length; i++) {
@@ -100,6 +101,10 @@ function startGame() {
         document.getElementById('score').textContent = `Puntuación: ${score}`;
     }
 
+    function reloadGame() {
+        location.reload();
+    }
+
     // Controles
     document.getElementById('upButton').addEventListener('click', () => direction = { x: 0, y: -1 });
     document.getElementById('downButton').addEventListener('click', () => direction = { x: 0, y: 1 });
@@ -108,6 +113,7 @@ function startGame() {
 
     // Reiniciar nivel
     document.getElementById('restartButton').addEventListener('click', resetGame);
+    document.getElementById('reloadButton').addEventListener('click', reloadGame);
 
     gameLoop();
 }

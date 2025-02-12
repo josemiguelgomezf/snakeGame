@@ -1,94 +1,111 @@
+html{
+    width: 100%;
+    height: 100%;
+}
+
 body {
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
+    justify-items: center;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-image: url('fondos/fondoMenu.jpeg');
-    background-size: cover;
-    background-position: center;
     font-family: 'Press Start 2P', cursive;
-    color: white;
-    text-align: center;
-}
-
-#menu, #dialog, #levelSelect, #game {
-    text-align: center;
-    width: 90vw;
-    max-width: 400px;
-    margin: auto;
-}
-
-#menu h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-}
-
-#playButton, #continueButton, #level1Button, #restartButton {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 1rem;
-    padding: 10px 20px;
-    background-color: #8B4513;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-#dialog {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#levelSelect {
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#game {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#score {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-#snakeGame {
-    border: 2px solid white;
-    background-color: black;
-    width: 90vw;
-    max-width: 400px;
-    height: 90vw;
-    max-height: 400px;
-}
-
-#controls {
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-
-#controls button {
-    font-size: 1.5rem;
-    padding: 10px;
-    background-color: #8B4513;
-    color: white;
-    border: none;
-    cursor: pointer;
-}
-
-#restartButton {
-    margin-top: 20px;
 }
 
 .hidden {
     display: none;
+}
+
+#menu{ 
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#dialog, #levelSelect, #game { 
+    display: none;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu h1{
+    text-align: center;
+    width: 100%;
+    font-size: 4rem;
+}
+
+#menu button {
+    width: 200px;
+    height: 50px;
+    font-size: 1.5rem;
+    margin: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#dialogContent {
+    text-align: center;
+    width: 75%;
+    font-size: 1rem;
+}
+
+#dialog button {
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    margin: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#levelSelect h2{
+    text-align: center;
+    width: 100%;
+    font-size: 4rem;
+}
+
+#levelSelect button {
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    margin: 10px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#game button {
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    margin: 0.1rem;
+    font-family: 'Press Start 2P', cursive;
+}
+
+#score{
+    width: 100%;
+    text-align: center;
+}
+
+#controls2{
+    width: 100%;
+    text-align: center;
+}
+
+#controls button {
+    width: 200px;
+    height: 50px;
+    font-size: 1rem;
+    font-family: 'UnifrakturCook', static;
+}
+
+#snakeGame {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
 }
