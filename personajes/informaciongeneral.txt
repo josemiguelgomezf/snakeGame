@@ -1,0 +1,37 @@
+SerpentKnight – Concepto del Juego
+
+Resumen
+
+SerpentKnight es un juego de estilo Snake con una ambientación medieval, gráficos pixel art y una narrativa ligera tipo novela visual. 
+El protagonista, Ser Knight, es un caballero transformado en serpiente por la bruja Lady Serpentina. Para romper la maldición, 
+deberá atravesar cuatro peligrosos reinos, recolectar piedras encantadas y derrotar a los guardianes mágicos.
+
+El juego combina la jugabilidad clásica de Snake con mecánicas nuevas, como obstáculos dinámicos y habilidades especiales, 
+integradas en una historia progresiva entre niveles.
+
+Historia
+
+Ser Knight, un noble caballero, desafió a la poderosa bruja Lady Serpentina sin conocer su verdadero poder. 
+Como castigo, ella lo convirtió en una serpiente. Ahora, para recuperar su forma humana, debe viajar a través de sus dominios, 
+superar peligros y derrotar a los guardianes que custodian las piedras encantadas necesarias para romper la maldición.
+
+Cada nivel representa un reino dentro del dominio de Lady Serpentina, con desafíos únicos. A medida que Ser Knight avanza, 
+su cuerpo crece, lo que se interpreta narrativamente como ganar poder y recuperar piezas de su antigua armadura sagrada.
+
+Primer diálogo del juego (Antes del primer nivel)
+
+(Presentado en formato novela visual con gráficos pixel art.)
+
+🔮 Lady Serpentina: "Pobre Ser Knight, tan valiente... tan testarudo. Creíste que podías desafiarme y ahora, mírate. 
+No eres más que un gusano alargado deslizándote por el suelo."
+
+⚔️ Ser Knight: "¡Soy un caballero! Y romperé esta maldición, te lo juro por mi espada... aunque ahora no tenga manos."
+
+🔮 Lady Serpentina: "Ja, ja, ja. Adelante, si quieres recuperar tu forma, tendrás que cruzar mis dominios. Pero cuidado... 
+cuanto más poder obtengas, más difícil será controlarlo."
+
+(Pantalla fundido a negro, inicia el primer nivel.)
+
+Mecánicas y particularidades jugables
+
+Cada nivel introduce nuevas mecánicas que afectan la jugabilidad clásica de Snake.

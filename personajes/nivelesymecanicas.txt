@@ -1,0 +1,34 @@
+📜 Evolución del Juego
+Cada nivel representa un reino dentro del dominio de Lady Serpentina. A medida que avanzas, la dificultad aumenta, pero también desbloqueas nuevas habilidades o mejoras.
+
+🏰 Nivel 1: Bosque Encantado 🌲
+Trampas de raíces: Si te quedas quieto demasiado tiempo, te atrapan.
+Frutas mágicas: Algunas reducen temporalmente el tamaño de Ser Knight.
+Enemigo final: Druida Guardián, lanza hechizos para ralentizar.
+🔹 Novedad: Introducción a las mecánicas básicas y primeros diálogos.
+
+🏜️ Nivel 2: Desierto de los Espectros 🏺
+Tormentas de arena: Periódicamente reducen la visibilidad.
+Serpientes espirituales: Enemigos que se mueven como la serpiente del jugador.
+Oasis curativo: Un punto seguro donde puedes reducir tu tamaño.
+Enemigo final: Espectro del Destierro, se teletransporta por la arena.
+🔹 Novedad: Introducción de enemigos móviles y áreas seguras.
+
+🌊 Nivel 3: Mar de las Sombras 🌊
+Oleaje: Cambia la velocidad y dirección del movimiento.
+Peces encantados: Comerse algunos te ralentiza o acelera temporalmente.
+Rocas flotantes: Obstáculos que se mueven en patrones.
+Enemigo final: Kraken Maldito, sus tentáculos bloquean partes del mapa.
+🔹 Novedad: Incorporación de mecánicas de velocidad variable y obstáculos dinámicos.
+
+⛰️ Nivel 4: Castillo de Lady Serpentina 🏰
+Soldados de piedra: Se mueven en patrones predeterminados.
+Fuego maldito: Zonas donde la serpiente pierde longitud si las pisa.
+Trampas ilusorias: Caminos falsos que desaparecen al tocarlos.
+Jefe final: Lady Serpentina, cambia las reglas del juego en cada fase de la batalla.
+🔹 Novedad: Elementos de puzzle y cambios en las mecánicas para la batalla final.
+
+⚔️ Mecánicas extra a considerar
+Habilidades temporales: En ciertos niveles podrías obtener mejoras (velocidad extra, invulnerabilidad momentánea, doble crecimiento).
+Tienda o mejoras: Con puntuación acumulada podrías elegir mejoras antes de cada nivel.
+Elecciones narrativas: Pequeñas decisiones en los diálogos que afecten el desarrollo de la historia o el combate final.

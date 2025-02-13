@@ -1,0 +1,11 @@
+Personajes en Pixel Art
+🐍 Ser Knight (Caballero Serpiente)
+"Un caballero transformado en serpiente, con un casco medieval metálico y una pequeña capa. 
+Su cuerpo es una serpiente escamada con tonos plateados y dorados, con ojos brillantes y expresivos. 
+Tiene una mirada determinada y valiente. Su estilo es pixel art con un tamaño de sprite ideal para un juego de plataformas 2D, 
+con detalles medievales."
+
+🔮 Lady Serpentina (Bruja Villana)
+"Una hechicera oscura con túnicas moradas y doradas, ojos resplandecientes y un báculo con forma de serpiente. 
+Su expresión es burlona y malvada. Su cabello es largo y flota con energía mágica oscura. Su estilo es pixel art, 
+con detalles de luz mágica rodeándola en un aura oscura."
