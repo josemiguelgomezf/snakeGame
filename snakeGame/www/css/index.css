@@ -1,119 +1,171 @@
-html{
-    width: 99%;
-    height: 99%;
-}
-
-body {
+html, body {
     width: 99%;
     height: 99%;
     display: flex;
-    justify-items: center;
     justify-content: center;
     align-items: center;
-    font-family: 'Press Start 2P', cursive;
-}
-
-.hidden {
-    display: none;
-}
-
-#menu{ 
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-}
-
-#dialog, #dialogLevel1, #levelSelect, #game { 
-    display: none;
-    flex-wrap: wrap;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-}
-
-#menu h1{
+    font-family: 'UnifrakturCook', cursive;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #1b1b2f, #0f0f1b, #1b1b2f);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 10s ease infinite;
+    color: white;
     text-align: center;
-    width: 100%;
-    font-size: 4rem;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
 }
 
-#menu button {
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Eliminamos la imagen de fondo incorrecta */
+/* Partículas animadas tipo estrellas/neblina */
+body::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, rgba(0,0,0,0) 70%);
+    opacity: 0.2;
+    animation: starsAnimation 20s linear infinite;
+    z-index: -1;
+}
+
+@keyframes starsAnimation {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Estilo del título */
+h1 {
+    font-family: 'UnifrakturCook', cursive;
+    font-size: 4rem;
+    color: #d4af37;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 2;
+}
+
+/* Botón "Jugar" con efecto mágico */
+#playButton {
+    background: #a83232;
+    color: white;
+    border: 3px solid #d4af37;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    font-family: 'UnifrakturCook', cursive;
     width: 10rem;
     height: 3rem;
     font-size: 1.5rem;
     margin: 1rem;
-    font-family: 'Press Start 2P', cursive;
+    z-index: 2;
+}
+
+#optionsButton {
+    font-size: 1.5rem;
+}
+
+#playButton::before {
+    content: "";
+    position: absolute;
+    top: -5px; left: -5px;
+    right: -5px; bottom: -5px;
+    border-radius: 5px;
+    border: 2px solid rgba(212, 175, 55, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#playButton:hover {
+    background: #d44b4b;
+    transform: scale(1.1);
+}
+
+#playButton:hover::before {
+    opacity: 1;
+}
+
+/* Menús */
+#menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#dialog, #dialogLevel1, #levelSelect, #game {
+    display: none;
+}
+
+#dialog, #dialogLevel1, #levelSelect, #game {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+#menu h1, #levelSelect h2 {
+    width: 100%;
+    text-align: center;
+}
+
+/* Diálogos mejorados */
+#dialog, #dialogLevel1 {
+    background: rgba(0, 0, 0, 0.8);
+    border: 3px solid #d4af37;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
 }
 
 #dialogContent, #dialogLevel1Content {
-    text-align: center;
-    width: 75%;
-    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
-#dialog button {
+#continueButton, #continueLevel1Button {
+    align-self: center;
+}
+
+/* Estilos de botones en el juego */
+button {
     width: 10rem;
     height: 3rem;
     font-size: 1rem;
+    font-family: 'UnifrakturCook', cursive;
     margin: 1rem;
-    font-family: 'Press Start 2P', cursive;
+    background: #282828;
+    color: white;
+    border: 2px solid #c0c0c0;
+    transition: 0.2s;
+    position: relative;
+    z-index: 2;
 }
 
-#dialogLevel1 button {
-    width: 10rem;
-    height: 3rem;
-    font-size: 1rem;
-    margin: 1rem;
-    font-family: 'Press Start 2P', cursive;
+button:hover {
+    background: #404040;
+    border-color: #d4af37;
 }
 
-#levelSelect h2{
-    text-align: center;
-    width: 100%;
-    font-size: 4rem;
-}
-
-#levelSelect button {
-    width: 12rem;
-    height: 5rem;
-    font-size: 1rem;
-    margin: 1rem;
-    font-family: 'Press Start 2P', cursive;
-}
-
-#game button {
-    width: 10rem;
-    height: 3rem;
-    font-size: 1rem;
-    margin: 0.5rem;
-    font-family: 'Press Start 2P', cursive;
-}
-
-#score{
-    width: 100%;
-    text-align: center;
-}
-
-#controls2{
-    width: 100%;
-    text-align: center;
-}
-
-#controls button {
-    width: 10rem;
-    height: 3rem;
-    font-size: 1rem;
-    font-family: 'UnifrakturCook', static;
-}
-
+/* Ajustar tamaño del canvas del juego */
 #snakeGame {
-    width: 75%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
+    width: 75vw;
+    height: 75vh;
+    border: 3px solid #d4af37;
+    background: black;
 }
+

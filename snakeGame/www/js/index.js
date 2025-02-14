@@ -19,9 +19,57 @@ const dialogsLevel1 = [
 "🌲 (El fondo del nivel es un oscuro bosque encantado, con colores sombríos y efectos visuales para una mayor inmersión.)",
 "⚔️ Ser Knight: No me asustan tus ilusiones ni tus guardianes. Este es solo el primer paso en mi camino… y nada me detendrá."
 ];
+const canvas = document.getElementById('particleCanvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Establece el tamaño del canvas
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        
+        // Partículas
+        const particles = [];
+        
+        function Particle() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 3 + 1;
+            this.speedY = Math.random() * 3 + 1;
+        }
 
+        Particle.prototype.update = function() {
+            this.y += this.speedY;
+            if (this.y > canvas.height) {
+                this.y = -this.size;
+            }
+        };
+
+        Particle.prototype.draw = function() {
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fill();
+        };
+
+        function createParticles() {
+            for (let i = 0; i < 100; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particles.length; i++) {
+                particles[i].update();
+                particles[i].draw();
+            }
+            requestAnimationFrame(animateParticles);
+        }
+
+        createParticles();
+        animateParticles();
 // Iniciar juego
 document.getElementById('playButton').addEventListener('click', function() {
+    document.getElementById('audioMenu').play();
     document.getElementById('menu').style.display='none';
     document.getElementById('dialog').style.display='flex';
     showNextDialog();
